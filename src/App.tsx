@@ -1,10 +1,11 @@
 import React from 'react';
 import { ConfigProvider } from 'antd';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import RootStore from '@/stores';
 import zhCN from 'antd/lib/locale/zh_CN';
-
+import RootStore from '@/stores';
 import routes from '@/routes';
+
+import './styles/index.css';
 
 function App() {
   return (

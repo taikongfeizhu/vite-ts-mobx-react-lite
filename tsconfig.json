@@ -3,7 +3,7 @@
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
-    "typeRoots": ["./node_modules/@types/", "./types"],
+    "typeRoots": ["node", "node_modules/@types", "./typings"],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
@@ -17,6 +17,7 @@
     "noEmit": true,
     "jsx": "react",
     "baseUrl": "./",
+    "rootDirs": ["./"],
     "paths": {
       "@/*": ["./src/*"],
       "~/public/*": ["./public/*"]
@@ -26,11 +27,9 @@
     "vite.config.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "types/*.ts",
-    "types/*.d.ts",
-    "mock/**/*.ts"
+    "typings/*.d.ts",
+    "config/*.ts",
+    "mock/*.ts"
   ],
   "exclude": ["node_modules", "dist", "**/*.js"]
 }
