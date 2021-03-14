@@ -25,11 +25,10 @@
   },
   "include": [
     "vite.config.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
     "typings/*.d.ts",
-    "config/*.ts",
-    "mock/*.ts"
+    "src/**/*",
+    "config/**/*",
+    "mock/**/*"
   ],
-  "exclude": ["node_modules", "dist", "**/*.js"]
+  "exclude": ["node_modules", "dist", "**/*.js", "**/*.less"]
 }

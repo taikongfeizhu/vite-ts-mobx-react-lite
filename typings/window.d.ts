@@ -1,4 +1,4 @@
 // 定义window变量
 interface Window {
-  r: string[];
+  test2: string[];
 }
