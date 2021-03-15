@@ -1,9 +1,9 @@
 import React from 'react';
 import { ConfigProvider } from 'antd';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import zhCN from 'antd/lib/locale/zh_CN';
 import RootStore from '@/stores';
-import routes from '@/routes';
+import Routes from '@/routers';
 
 import './styles/index.less';
 
@@ -12,13 +12,7 @@ function App() {
     <ConfigProvider locale={zhCN}>
       <RootStore>
         <Router>
-          <Switch>
-            {routes.map((route) => (
-              <Route exact={route.exact} key={route.path} path={route.path}>
-                <route.component />
-              </Route>
-            ))}
-          </Switch>
+          <Routes />
         </Router>
       </RootStore>
     </ConfigProvider>

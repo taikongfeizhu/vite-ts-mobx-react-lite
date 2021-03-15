@@ -10,6 +10,8 @@ tailwindcss and autoprefixer.
 
 ## Includes
 
+https://github.com/taikongfeizhu/vite-ts-mobx-react-lite
+
 - [x] Vite
 - [x] TypeScript
 - [x] React
