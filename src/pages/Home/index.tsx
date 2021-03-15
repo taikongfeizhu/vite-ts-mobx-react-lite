@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import React from 'react';
 import { useStores } from '@/hooks';
 
-import './style.less';
+import style from './index.module.less';
 
 export default function Home() {
   const {
@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className='container'>Search artifacts {currentNode}</div>
+      <div className={style.container}>Search artifacts {currentNode}</div>
       <Button type='primary'>Home</Button>
     </div>
   );
