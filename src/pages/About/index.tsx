@@ -1,10 +1,17 @@
-import { Button } from 'antd';
 import React from 'react';
+import { useStores } from '@/hooks';
+import styles from './index.module.less';
 
-export default function About() {
+const About = (): JSX.Element => {
+  const {
+    commonStore: { currentNode },
+  } = useStores();
+
   return (
-    <div>
-      <Button type='primary'>About</Button>
+    <div className={styles.container}>
+      <p>{currentNode}</p>
     </div>
   );
-}
+};
+
+export default About;
