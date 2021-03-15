@@ -1,12 +1,17 @@
 {
   "name": "vite-ts-mobx-react-lite",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "author": {
     "email": "huangjian1820@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taikongfeizhu/vite-ts-mobx-react-lite.git"
+  },
   "scripts": {
     "dev": "vite --mode development",
+    "start": "vite --mode development",
     "build:beta": "vite build --mode beta",
     "build:release": "vite build --mode release",
     "preinstall": "npx only-allow yarn",
@@ -58,6 +63,9 @@
     "vite": "^2.0.5",
     "vite-plugin-babel-import": "^2.0.2",
     "vite-plugin-imp": "^2.0.4"
+  },
+  "engines": {
+    "node": "^12 || >=14"
   },
   "husky": {
     "hooks": {

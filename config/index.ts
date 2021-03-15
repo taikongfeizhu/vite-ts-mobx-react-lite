@@ -1,14 +1,7 @@
-export default {
-  development: {
-    cdn: './',
-    apiBaseUrl: '/api',
-  },
-  preview: {
-    cdn: '/',
-    apiBaseUrl: '//www.beta.xxx.com/v1',
-  },
-  release: {
-    cdn: '/',
-    apiBaseUrl: '//www.xxx.com/v1',
-  },
-};
+import envConfig, { Env } from './env';
+type envStr = keyof Env;
+
+const env = process.argv[process.argv.length - 1];
+const config = envConfig[env as envStr];
+
+export default config;

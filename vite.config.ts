@@ -4,21 +4,15 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 import vitePluginImp from 'vite-plugin-imp';
 import path from 'path';
 import fs from 'fs';
-
 import config from './config';
-
-type Env = keyof typeof config;
 
 const themeVariables = lessToJS(
   fs.readFileSync(path.resolve(__dirname, './config/variables.less'), 'utf8'),
 );
 
-const env = process.argv[process.argv.length - 1];
-const base = config[env as Env];
-
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: base.cdn,
+  base: config.cdn,
   plugins: [
     reactRefresh(),
     vitePluginImp({
@@ -41,10 +35,10 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3001,
+    port: 3000,
     proxy: {
       '/api': {
-        target: 'http://47.99.134.126:28019/api/v1',
+        target: 'http://127.0.0.1:3001',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
