@@ -11,7 +11,9 @@ export default function Home(): JSX.Element {
   return (
     <div className={style.container}>
       <header className='max-w-md w-full space-y-8 items-center'>
-        <img src={logo} className='mx-auto h-36 w-auto' alt='logo' />
+        <div className={style.logo}>
+          <img src={logo} className='mx-auto h-36 w-auto' alt='logo' />
+        </div>
         <p className='mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100'>
           Hello Vite + React!
         </p>

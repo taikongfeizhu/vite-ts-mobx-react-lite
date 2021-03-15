@@ -18,11 +18,11 @@ https://github.com/taikongfeizhu/vite-ts-mobx-react-lite
 - [x] React-Router
 - [x] Antd
 - [x] Mobx
-- [x] mobx-react-lite
+- [x] Mobx-react-lite
 - [x] Axios
 - [x] ESlint
 - [x] Stylelint
-- [x] lint-staged
+- [x] Lint-staged
 - [x] Prettier
 - [x] Husky
 - [x] Autoprefixer

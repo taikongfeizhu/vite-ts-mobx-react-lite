@@ -4,6 +4,8 @@ import { AppstoreOutlined, HomeFilled } from '@ant-design/icons';
 import { MenuInfo } from 'rc-menu/lib/interface';
 import { useHistory } from 'react-router-dom';
 
+import style from './index.module.less';
+
 const Nav: React.FC = () => {
   const [current, changeCurrent] = useState<string>('page1');
   const history = useHistory();
@@ -21,10 +23,10 @@ const Nav: React.FC = () => {
       mode='horizontal'
     >
       <Menu.Item key='/' icon={<HomeFilled />}>
-        Home
+        <span className={style.text}>Home</span>
       </Menu.Item>
       <Menu.Item key='/about' icon={<AppstoreOutlined />}>
-        About
+        <span className={style.text}>About</span>
       </Menu.Item>
     </Menu>
   );
