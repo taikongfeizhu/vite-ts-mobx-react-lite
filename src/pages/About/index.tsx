@@ -6,7 +6,7 @@ import styles from './index.module.less';
 
 const About = observer(() => {
   const {
-    commonStore: { compGet, add, sub },
+    commonStore: { compGet, add, sub, reset },
   } = useStores();
 
   const addHandle = () => {
@@ -17,11 +17,26 @@ const About = observer(() => {
     sub();
   };
 
+  const resetHandle = () => {
+    reset();
+  };
+
   return (
     <div className={styles.container}>
-      <p>{compGet}</p>
-      <Button onClick={addHandle}>+</Button>
-      <Button onClick={subHandle}>-</Button>
+      <div className='text-center text-gray-900 p-20'>
+        <h2 className='p-5 lg:text-lg'>count: {compGet}</h2>
+        <div className='m-2'>
+          <Button size='large' onClick={addHandle} className='w-20'>
+            Add
+          </Button>
+          <Button size='large' onClick={subHandle} className='w-20'>
+            Sub
+          </Button>
+          <Button size='large' onClick={resetHandle} className='w-20'>
+            Reset
+          </Button>
+        </div>
+      </div>
     </div>
   );
 });

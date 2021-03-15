@@ -14,6 +14,10 @@ export default class CommonStore {
     this.count += 1;
   };
 
+  reset = () => {
+    this.count = 0;
+  };
+
   sub = () => {
     this.count -= 1;
   };

@@ -9,9 +9,9 @@ export default function Home(): JSX.Element {
   const history = useHistory();
 
   return (
-    <div className='min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8'>
+    <div className={style.container}>
       <header className='max-w-md w-full space-y-8 items-center'>
-        <img src={logo} className='mx-auto h-24 w-auto' alt='logo' />
+        <img src={logo} className='mx-auto h-36 w-auto' alt='logo' />
         <p className='mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100'>
           Hello Vite + React!
         </p>

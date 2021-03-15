@@ -7,19 +7,21 @@ import ErrorPage from '@/pages/Error';
 const AboutPage = lazy(() => import('../pages/About'));
 
 const RouterContainer: React.FC = () => (
-  <Suspense fallback={<Spin />}>
-    <Switch>
-      <Route path='/' exact={true}>
-        <HomePage />
-      </Route>
-      <Route path='/about' exact={true}>
-        <AboutPage />
-      </Route>
-      <Route path='*'>
-        <ErrorPage />
-      </Route>
-    </Switch>
-  </Suspense>
+  <div className='router-container'>
+    <Suspense fallback={<Spin />}>
+      <Switch>
+        <Route path='/' exact={true}>
+          <HomePage />
+        </Route>
+        <Route path='/about' exact={true}>
+          <AboutPage />
+        </Route>
+        <Route path='*'>
+          <ErrorPage />
+        </Route>
+      </Switch>
+    </Suspense>
+  </div>
 );
 
 export default RouterContainer;
