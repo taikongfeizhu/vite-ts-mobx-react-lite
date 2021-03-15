@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "vite --mode development",
     "start": "vite --mode development",
-    "build:beta": "vite build --mode beta",
+    "build:preview": "vite build --mode preview",
     "build:release": "vite build --mode release",
     "preinstall": "npx only-allow yarn",
     "postinstall": "yarn husky install",
