@@ -20,10 +20,9 @@ module.exports = {
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   rules: {
     'max-len': ['warn', { code: 80 }],
-    'no-console': 'error',
     'block-spacing': ['error', 'always'],
     'sort-imports': 'warn',
-    'no-console': 'error',
+    'no-console': 'warn',
     '@typescript-eslint/no-unused-vars': 'error',
   },
 };

@@ -29,6 +29,7 @@ https://github.com/taikongfeizhu/vite-ts-mobx-react-lite
 - [x] Tailwindcss
 - [x] Postcss
 - [x] Less
+- [x] tsyringe
 - [ ] Mock
 
 ## Install and use

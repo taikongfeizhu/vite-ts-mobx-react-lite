@@ -6,7 +6,8 @@ import styles from './index.module.less';
 
 const About = observer(() => {
   const {
-    commonStore: { compGet, add, sub, reset },
+    homeStore: { compGet, add, sub, reset },
+    commonStore: { title },
   } = useStores();
 
   const addHandle = () => {
@@ -24,6 +25,7 @@ const About = observer(() => {
   return (
     <div className={styles.container}>
       <div className='text-center text-gray-900 p-20'>
+        <h2>{title}</h2>
         <h2 className='p-5 lg:text-lg'>count: {compGet}</h2>
         <div className='m-2'>
           <Button size='large' onClick={addHandle} className='w-20'>

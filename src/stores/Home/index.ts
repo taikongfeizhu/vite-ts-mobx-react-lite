@@ -1,10 +1,14 @@
 // https://mobx-react.js.org/
 // https://mobx.js.org/README.html
 
+import { injectable, inject } from 'tsyringe';
 import { makeAutoObservable } from 'mobx';
+import { Tokens } from '../tokens';
+import CommonStore from '../Common';
 
-export default class CommonStore {
-  constructor() {
+@injectable()
+class HomeStore {
+  constructor(@inject(Tokens.Common) public commonStore: CommonStore) {
     makeAutoObservable(this);
   }
 
@@ -16,6 +20,7 @@ export default class CommonStore {
 
   reset = () => {
     this.count = 0;
+    this.commonStore.setTitle();
   };
 
   sub = () => {
@@ -26,3 +31,5 @@ export default class CommonStore {
     return this.count * 2;
   }
 }
+
+export default HomeStore;

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
 import { useHistory } from 'react-router';
+import { useStores } from '@/hooks';
 import style from './index.module.less';
 import logo from '/logo.svg';
 
 export default function Home(): JSX.Element {
   const [count, setCount] = useState(0);
   const history = useHistory();
+  const { commonStore } = useStores();
 
   return (
     <div className={style.container}>
@@ -15,7 +17,7 @@ export default function Home(): JSX.Element {
           <img src={logo} className='mx-auto h-36 w-auto' alt='logo' />
         </div>
         <p className='mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100'>
-          Hello Vite + React!
+          {commonStore.title}
         </p>
         <p className='mt-2 text-center text-sm text-gray-600 dark:text-gray-400'>
           <Button onClick={() => setCount((count) => count + 1)}>

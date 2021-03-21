@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "reflect-metadata"],
     "typeRoots": ["node", "node_modules/@types", "./typings"],
     "allowJs": false,
     "skipLibCheck": false,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,19 +16,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": "./",
-    "rootDirs": ["./"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "paths": {
       "@/*": ["./src/*"],
       "~/public/*": ["./public/*"]
     }
   },
-  "include": [
-    "vite.config.ts",
-    "typings/*.d.ts",
-    "src/**/*",
-    "config/**/*",
-    "mock/**/*"
-  ],
-  "exclude": ["node_modules", "dist", "**/*.js", "**/*.less"]
+  "include": ["vite.config.ts", "typings", "src", "config", "mock"],
+  "exclude": ["node_modules", "dist"]
 }
