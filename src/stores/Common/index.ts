@@ -7,7 +7,7 @@ class CommonStore {
     makeAutoObservable(this);
   }
 
-  title = 'Hello Vite + React!';
+  title = 'Hello Vite + React!!!';
 
   setTitle() {
     console.log(this.title, 'from common');
