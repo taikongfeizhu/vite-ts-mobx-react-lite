@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import { Spin } from 'antd';
 import { Route, Switch } from 'react-router-dom';
-import HomePage from '@/pages/Home';
 import ErrorPage from '@/pages/Error';
 
+const HomePage = lazy(() => import('../pages/Home'));
 const AboutPage = lazy(() => import('../pages/About'));
 
 const RouterContainer: React.FC = () => (
