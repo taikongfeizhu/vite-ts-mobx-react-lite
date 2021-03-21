@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import { Button } from 'antd';
 import { useHistory } from 'react-router';
 import { useStores } from '@/hooks';
 import style from './index.module.less';
 import logo from '/logo.svg';
 
-export default function Home(): JSX.Element {
+interface Props {
+  name?: string;
+}
+
+const Home: FC<Props> = ({ name = 'Home' }: Props) => {
   const [count, setCount] = useState(0);
   const history = useHistory();
   const { commonStore } = useStores();
@@ -35,7 +39,7 @@ export default function Home(): JSX.Element {
                 history.push('/about');
               }}
             >
-              About Page
+              About {name} Page
             </span>
           </a>
           {' | '}
@@ -51,4 +55,6 @@ export default function Home(): JSX.Element {
       </header>
     </div>
   );
-}
+};
+
+export default Home;
