@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
-import { injectable } from 'tsyringe';
+import { Service } from 'typedi';
 
-@injectable()
+@Service()
 class CommonStore {
   constructor() {
     makeAutoObservable(this);

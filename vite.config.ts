@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import lessToJS from 'less-vars-to-js';
+import ViteTS from 'vite-plugin-ts';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import vitePluginImp from 'vite-plugin-imp';
 import path from 'path';
@@ -15,6 +16,7 @@ export default defineConfig({
   base: config.cdn,
   plugins: [
     reactRefresh(),
+    ViteTS(),
     vitePluginImp({
       libList: [
         {

@@ -1,14 +1,13 @@
 // https://mobx-react.js.org/
 // https://mobx.js.org/README.html
 
-import { injectable, inject } from 'tsyringe';
+import { Service } from 'typedi';
 import { makeAutoObservable } from 'mobx';
-import { Tokens } from '../tokens';
 import CommonStore from '../Common';
 
-@injectable()
+@Service()
 class HomeStore {
-  constructor(@inject(Tokens.Common) public commonStore: CommonStore) {
+  constructor(public commonStore: CommonStore) {
     makeAutoObservable(this);
   }
 
